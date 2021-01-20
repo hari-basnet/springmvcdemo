@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -8,6 +8,18 @@
 
 	<h1>Login Form</h1>
 	<hr>
+	
+	<form action="/login" method="post">
+	
+		<span style="color:red" th:text="${message}"></span><br>
+		<label>Username</label><br>
+		<input type="text" name="userName"><br>
+		<label>Password</label>
+		<input type="password" name="password"><br>
+		<input type="submit" value="Login">
+				
+		
+	</form>
 
 </body>
 </html>

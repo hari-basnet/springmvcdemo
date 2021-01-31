@@ -23,4 +23,23 @@ public class StudentService {
 
 		return studentRepository.findAll();
 	}
+
+	public void deleteStudent(long sid) {
+
+		studentRepository.deleteById(sid);
+	}
+
+	public Student editStudent(long sid) {
+
+		return studentRepository.getOne(sid);
+	}
+
+	public Student getStudentById(long sid) {
+		return studentRepository.getOne(sid);
+	}
+
+	public void updateStudent(Student student) {
+
+		studentRepository.save(student);
+	}
 }

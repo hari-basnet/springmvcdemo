@@ -19,10 +19,11 @@
 	Student List
 	</title>
 </head>
-<body>
-	<table id="studentTable">
+<body style="margin: 0 25px;">
+	<h1 align="center">Student list</h1>
+	<table id="studentTable" class="table table-stripted">
 		<thead>
-			<tr>
+			<tr class="success">
 				<td >First Name</td>
 				<td >Last Name</td>
 				<td >College</td>
@@ -33,7 +34,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="student: ${studentList}">
+			<tr th:each="student: ${studentList}" class="danger">
 					<td th:text="${student.firstName}"></td>
 					<td th:text="${student.lastName}"></td>
 					<td th:text="${student.college}"></td>
